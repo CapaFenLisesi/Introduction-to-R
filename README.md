@@ -7,3 +7,4 @@ Acknowledgements:
 
 - Thanks to Karen Moxcey for providing me with code and a very good starting point for the course.
 - Thanks to Doug Nychka for many of the datasets used in the class.
+- Thanks to Reed Maxwell for providing funding for the course.
