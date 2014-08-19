@@ -283,3 +283,13 @@ benchmark( fibR(30), fibRcpp(30), replications=1 ) #Much faster
 # - Compiling functions takes much longer
 # - I've had issues with C++ integration for older versions of R
 # + Huge speed-up when used in certain scenarios
+
+################################################################################################
+# shiny
+# The shiny package gives a relatively easy way for R programmers to build interactive web apps.  You can
+# implement any kind of R analysis, and then write a bit of R code around it (using shiny) to turn your
+# analysis into something that a non-programmer can interact with and understand.  I'm sure there's tons
+# of examples if you just google it, but here's one I put together:
+# http://glimmer.rstudio.com/rockclimber/Example/
+# Note: RStudio (a company) hosts shiny apps, so you can sign up for a free account, upload your shiny code
+# and you'll have an interactive app anyone can view with an internet connection.
