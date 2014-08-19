@@ -26,14 +26,14 @@ Qn = matrix(0, ncol=1000,nrow=1)
 Vn = matrix(0, ncol=1000,nrow=1)
 
 for(i in 0:1000){
-q = V/Tstar
-#print (paste("q= ",q))
-V = V + (w-q)*dt
-#print (paste("V=",V))
-Qa[i] = w+(q0-w)*exp(-(i*dt)/Tstar)
-time[i] = i*dt
-Qn[i] = V/Tstar
-Vn[i] = V
+  q = V/Tstar
+  #print (paste("q= ",q))
+  V = V + (w-q)*dt
+  #print (paste("V=",V))
+  Qa[i] = w+(q0-w)*exp(-(i*dt)/Tstar)
+  time[i] = i*dt
+  Qn[i] = V/Tstar
+  Vn[i] = V
 }
 
 plot(time,Qn,xlim=c(0,10),xlab="Time [h]",ylab="Volume [mm]",cex = .1, col = "black", type="l")
