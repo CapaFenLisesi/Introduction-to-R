@@ -21,7 +21,7 @@ rainfall = read.csv("rainfall.csv")
 
 # This is a data frame
 # Basically just allows you to put vectors in a table
-# Can get the columns of faithful separately
+# Can get the columns of rainfall separately
 
 names(rainfall)
 rainfall$longitude
