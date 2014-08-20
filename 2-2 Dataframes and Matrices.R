@@ -196,3 +196,17 @@ is(A)
 A = as.matrix(A)
 A #Column names are still here!
 is(A)
+
+# QUESTIONS!
+# Make a 6x6 identity matrix, and verify that it's inverse is also the identity.
+
+
+
+# Remove the last column of the matrix you made above.  What happens if you try to find
+# it's inverse now?
+
+
+
+# Create a 15x15 upper triangular matrix with 1's on the diagonal and non-zero entries on the
+# upper triangle.  Does this matrix have an inverse?  What is it's determinant?
+
