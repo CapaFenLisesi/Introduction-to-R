@@ -24,14 +24,14 @@ seq(7, length=93, by=7)
 
 rep(0, 32)
 
+# QUESTIONS!
 # The sequence "3, 6, 9" repeated 15 times
 
-rep(seq(3, 9, by=3), 15)
+
 
 # The sequence 1 1 1 2 2 2 3 3 3 ... 20 20 20
 
-rep(1:20, each=3)
+
 
 # The sequence 2 2 4 4 6 6 2 2 4 4 6 6 2 2 4 4 6 6
 
-rep(seq(2, 6, by=2), 3, each=2)
