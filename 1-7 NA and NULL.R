@@ -24,3 +24,5 @@ mean(BoulderDaily$tmin, na.rm=T)
 
 # Alot of functions have the na.rm (remove NA's) option, but some don't.  You may have to
 # filter your data or do something fancy.
+
+# QUESTION!  How could we compute the mean of BoulderDaily$tmin without using the na.rm argument?
