@@ -293,3 +293,12 @@ benchmark( fibR(30), fibRcpp(30), replications=1 ) #Much faster
 # http://glimmer.rstudio.com/rockclimber/Example/
 # Note: RStudio (a company) hosts shiny apps, so you can sign up for a free account, upload your shiny code
 # and you'll have an interactive app anyone can view with an internet connection.
+
+################################################################################################
+# Sweave/knitr
+# Sweave, sometimes pronounced "S weave" (the old, non-open source version of R was S) is a package which enables
+# you to weave R code within LaTeX code.  It can be very useful for putting together documents when you want to
+# show what R code you ran and what results it gave you.  Do a google image search for "Sweave example" and you'll
+# see what you can do with this package.
+# knitr, pronounced "knit-er" works similarly, but it creates a html file instead of a pdf file.
+# If you're going to be using these packages, I highly recommend using RStudio.  Check it out!
