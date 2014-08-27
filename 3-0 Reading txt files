@@ -1,9 +1,0 @@
-# We can read in text files using the scan or read.table functions.
-
-input=matrix(scan("forcing.txt", skip=1), ncol=3, byrow=T)
-input=read.table("forcing.txt", skip=1)
-input=read.table("forcing.txt", header=T)
-
-?read.csv
-
-# So, read.csv and read.table are actually very closely related.
