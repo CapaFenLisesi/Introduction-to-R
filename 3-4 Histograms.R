@@ -40,12 +40,12 @@ for(i in 1:12){
 
 
 # QUESTION! 
-# Plot a histogram of the some simulated normal data.
+# Plot a histogram of some simulated normal data.
 # Make sure it plots the density.
 
 
 
 # QUESTION!
 # Can you overlay the expected density (the pdf of the normal distribution)?
-# Hint: Remember all the extra functions when we looked at rnorm?
+# Hint: Remember some of the extra functions we saw when we looked at rnorm?
 

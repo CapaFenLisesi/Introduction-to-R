@@ -5,6 +5,9 @@ bd = read.csv("BoulderDaily.csv")
 
 # We can create a simple boxplot of the temperatures:
 
+# Whoops!  May need to reset graphics window:
+# par( mfrow=c(1,1) )
+
 boxplot( bd$tmin )
 
 # What if we wanted to look at seasonal trends again?  Can we use boxplots?

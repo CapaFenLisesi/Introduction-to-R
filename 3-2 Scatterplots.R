@@ -81,6 +81,12 @@ plot(bd$tmin, bd$tmax, pch=16, col=alpha(colour=pal[bd$colorGroup], alpha=.1)
 
 ?par
 par(mfrow=c(3,4)) #Use a 3x4 grid
+plot(bd$tmin, bd$tmax)
+plot(bd$tmin, bd$tmax)
+par(mfrow=c(3,4))
+plot(bd$tmin, bd$tmax)
+
+par(mfrow=c(3,4))
 for(i in 1:12){
   temp = bd[bd$month==i,]
   plot(temp$tmin, temp$tmax, pch=16, col=alpha(colour=pal[temp$colorGroup], alpha=.1)
@@ -118,13 +124,3 @@ for(i in 1:12){
 # QUESTION!  Using the same dataset, examine the seasonal trends in temperature.
 # Hints:
 # - Use par(mfrow=c(1,1)) to return to a 1x1 plot grid (if you want)
-
-par(mfrow=c(1,1))
-plot( bd$month + bd$day/31, (bd$tmax+bd$tmin)/2, pch=16
-    ,col=alpha(alpha=0.01, colour="black")
-    ,xlab="Month of Year"
-    ,ylab="Mean Temperature"
-    ,main="Temperature Trends")
-
-# Note bd$month + bd$day/31 isn't quite accurate.  R has capabilities for handling dates,
-# but that's a whole new topic

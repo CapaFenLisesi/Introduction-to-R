@@ -13,8 +13,6 @@ x = seq(-3, 3, length=1000)
 
 y = x^2
 
-# Now let's make a blank plot
-
 plot( x, y )
 
 # The points make the line look a bit thick.  We could adjust the points:
