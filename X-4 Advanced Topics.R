@@ -302,3 +302,52 @@ benchmark( fibR(30), fibRcpp(30), replications=1 ) #Much faster
 # see what you can do with this package.
 # knitr, pronounced "knit-er" works similarly, but it creates a html file instead of a pdf file.
 # If you're going to be using these packages, I highly recommend using RStudio.  Check it out!
+
+################################################################################################
+# Setting defaults
+# You may want to set a few things each time you open R.  For example, when you run install.packages(),
+# R prompts you for the mirror you'd like to use.  You can use the following code to set your default
+# repository:
+options("repos" = c(CRAN = "http://cran.rstudio.com/"))
+# However, it's going to be a pain to remember to put this at the top of each of your code files.
+# Instead, you can create a .rprofile file, and put it in your home directory.  To figure out what
+# your home directory is, run:
+setwd("~")
+getwd()
+# Place the .rprofile file here, and in that text file you can put anything that you want R to run
+# each time a new R session starts.  However, be careful with this!  If you're ever going to be
+# sharing code with other people, you'll want to either make sure that they have your .rprofile or
+# that your .rprofile doesn't do anything that will affect their R user experience.  Here's what I
+# have in mine:
+
+## Don't ask me for my CRAN mirror every time
+options("repos" = c(CRAN = "http://cran.rstudio.com/"))
+
+## Penalize scientific notation:
+options(scipen=10)
+
+## Store the jar file for OJDBC connects
+jarfile = "C:/sqldeveloper/jdbc/lib/ojdbc6.jar"
+
+source_github <- function(u) {
+  # load package
+  library(RCurl)
+
+  # read script lines from website and evaluate
+  script <- getURL(u, followlocation=TRUE, ssl.verifypeer=F)
+  eval(parse(text = script), envir=.GlobalEnv)
+}
+
+# The first line sets my default package.  The next sets the scientific notation penalty (i.e. R
+# will switch to scientific notation only when there are at least 10 0's).  The third line
+# stores a directory that I always seem to forget (but I never use the jarfile variable directly
+# in my code, I just call it in the console to remind myself).  The last function is a bit special:
+# it allows me to load code from a url.  In particular, in github, you can store files with functions.
+# This function allows me to load all the code from these files by passing the url to source_github.
+# For example, try
+source_github("https://raw.githubusercontent.com/rockclimber112358/Introduction-to-R/master/1-3%20Assigning%20Variables.R")
+# You should get an error (remember in that code how we attempt -1 <-2?) but then see that x and y are
+# defined to 12 and 5, respectively.  Granted, you would never want to source this file in this way,
+# but I've used this a ton for writing functions.  You store and update code on github, and then
+# you can use the source_github function to load these functions on any computer with an internet
+# connection.
