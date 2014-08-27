@@ -20,11 +20,16 @@ w = 1
 V = 0
 t = 0
 q0 = V/Tstar
+
+# Here, we initialize vectors that will store time, Qa (the analytic solution), Qn (the numerical
+# solution) and Vn (the volume).
 time = matrix(0, ncol=1000,nrow=1)
 Qa = matrix(0, ncol=1000,nrow=1)
 Qn = matrix(0, ncol=1000,nrow=1)
 Vn = matrix(0, ncol=1000,nrow=1)
 
+# Loop through 1000 time steps, and approximate the differential equation using finite
+# differences.
 for(i in 0:1000){
   q = V/Tstar
   #print (paste("q= ",q))
@@ -36,6 +41,7 @@ for(i in 0:1000){
   Vn[i] = V
 }
 
+# Plot the results.
 plot(time,Qn,xlim=c(0,10),xlab="Time [h]",ylab="Volume [mm]",cex = .1, col = "black", type="l")
 points(time,Qa,xlim=c(0,10),cex = .1, col = "red", type="l")
 points(time,Vn,xlim=c(0,10),cex = .1, col = "blue",type="l")
